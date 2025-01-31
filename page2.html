@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Societies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Honk&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Julee&family=Kalnia+Glaze:wdth,wght@100..125,100..700&family=Nabla&family=Spicy+Rice&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="logo.jpeg">
+    <link rel="stylesheet" href="page2.css">
+    <style>
+        .updates-button {
+            position: absolute;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            top: 20px;
+            right: 12px;
+            border: 2px solid #000;
+            padding: 11px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            margin-bottom: 200px;
+            font-size: 22px;
+        }
+        .selling-button {
+            position: absolute;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            top: 153px;
+            right: 10px;
+            border: 2px solid #000;
+            padding: 15px 7px 15px 5px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            margin-bottom: 200px;
+            font-size: 21px;
+        }
+
+        .selling-button:hover {
+            background-color: #e0e0e0;
+        }
+        .updates-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .updates-button svg {
+            margin-right: 8px;
+            
+        }
+
+         .roadmap-button {
+            position: absolute;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            top: 80px;
+            right: 5px;
+            border: 2px solid #000;
+            padding: 8px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+        }
+
+        .roadmap-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .roadmap-button svg {
+            margin-right: 8px;
+        }
+ .trigram {
+    font-size: 40px; /* Adjust size as needed */
+    cursor: pointer;  /* Change cursor to pointer for interactivity */
+    position: absolute; /* Keep position absolute for menu toggle */
+    top: 20px; /* Adjust position from the top */
+    right: 30px; /* Position from the right */
+    border: 2px solid #000; /* Keep border style */
+    padding: 5px 8px 5px 8px; /* Add some padding */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f0f0f0; /* Background color */
+    color: #000; /* Text color */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.trigram:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+#menu {
+    display: none; /* Keep it hidden initially */
+    position: absolute; /* Keep it absolute to position it correctly */
+    top: 100%; /* Adjust if needed to position below the trigram */
+    right: 0; /* Align it to the right */
+    background-color: transparent; /* Set to transparent or remove any background */
+    z-index: 999; /* Ensure it stays above other elements */
+    padding: 0; /* Adjust padding as needed */
+    margin: 0; /* Ensure no margin */
+    list-style: none; /* Remove default list styling */
+}
+
+/* ========================== */
+#chatbot-icon {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#chatbot-icon:hover {
+            background-color: #ffffff; /* Change to a darker blue on hover */
+            transform: scale(1.2); /* Slightly enlarge the button on hover */
+        }
+
+#chatbot {
+    border-radius: 8px;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="trigram" onclick="toggleMenu()">&#x2630; <!-- Trigram symbol -->
+    <div id="menu" style="display:none;">
+      
+            <li>  <a href="updates.html" class="updates-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24"
+                    height="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-5-5.917V4a2 2 0 10-4 0v1.083A6.002 6.002 0 004 11v3.159c0 .538-.214 1.055-.595 1.436L2 17h5m2 0a2 2 0 104 0m-4 0h4" />
+                </svg>
+                Updates
+            </a>
+        </li>
+            <li>   <a href="roadmap.html" class="button roadmap-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 00-10 10 10 10 0 1010-10zm0 2v8l6.293 6.293a1 1 0 01-1.415 1.414L12 13.414l-4.878 4.879a1 1 0 01-1.415-1.414L10 12V4h2z" />
+                </svg>
+                RoadMap
+            </a>
+            <li>
+                <a href="bookMain.html" class="selling-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zm0 2v14h14V5H5z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 8h6M9 12h6M9 16h6" />
+                    </svg>
+                     BookMart
+                </a>
+            </li>
+            
+  
+    </div>
+</div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'none' ? 'block' : 'none'; // Toggle visibility
+        }
+    </script>
+
+ 
+
+    <div class="logo">
+        <img src="logo.jpeg" alt="logo" width="100px">
+    </div>
+    <div class="top-links">
+
+        <div class="Head">
+            <span class="heading">
+                <h1>
+                    SOCIETIES </h1>
+                <br>
+                <br>
+                <br>
+                <br> <br>
+                <h2>
+                    "Get ready to dive deep into IGDTUW's Vibrant City"
+                </h2>
+            </span>
+        </div>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <p>
+           
+        <div class="container">
+            <img src="bluenote.png" alt="technical society" class="thumbnail" width="250">
+            <div class="centered">
+                <a href="technical.html">Technical societies</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="whitenote.png" alt="cultural society" class="thumbnail" width="220">
+            <div class="centered">
+                <a href="cultural.html">Cultural soceities</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="rednote.png" alt="literary society" class="thumbnail" width="200">
+            <div class="centered">
+                <a href="literary.html">Literary and Educational soceities</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="bluenote.png" alt="media society" class="thumbnail" width="200">
+
+            <div class="centered">
+                <a href="media_cre.html">Media and Creative societies</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="greennote.png" alt="lifeskills society" class="thumbnail" width="300">
+            <div class="centered">
+                <a href="lifeskills.html">Life Skills society</a>
+            </div>
+        </div>
+        </p>
+        <br>
+        <div class="container">
+            <img src="rednote.png" alt="social society" class="thumbnail" width="220">
+            <div class="centered">
+                <a href="social_env.html">Social and Environmental societies
+
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="greennote.png" alt="study society" class="thumbnail" width="200">
+            <div class="centered">
+                <a href="study.html">Study Aid Societies</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="whitenote.png" alt="sports society" class="thumbnail" width="200">
+            <div class="centered">
+                <a href="sports.html">Sports societies</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="greennote.png" alt="fest society" class="thumbnail" width="200">
+            <div class="centered">
+                <a href="fest.html">Fest Organizing societies</a>
+            </div>
+        </div>
+
+        <br>
+        <div class="our_ig">
+            Brought to you by IGDTUW CITY
+            <br>
+            Connect with us:
+            <a href="https://www.instagram.com/igdtuw_city/"><img src="insta.png" alt="" width="30px"></a>
+
+        </div>
+        
+        <!-- ==========making changes today============== -->
+        <!-- Chatbot Icon -->
+<div id="chatbot-icon" onclick="toggleChatbot()" style="position: fixed; bottom: 20px; right: 20px; cursor: pointer;">
+    <img src="chatbot.png" alt="Chatbot" width="50" height="50"/>
+</div>
+
+<!-- Chatbot iframe (Initially hidden) -->
+<iframe id="chatbot" width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/fb33bb09-e252-4e87-a258-5e2b839ad566" style="position: fixed; bottom: 80px; right: 20px; display: none; border: none;"></iframe>
+
+<script>
+    function toggleChatbot() {
+    var chatbot = document.getElementById("chatbot");
+    if (chatbot.style.display === "none") {
+        chatbot.style.display = "block";
+    } else {
+        chatbot.style.display = "none";
+    }
+}
+</script>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

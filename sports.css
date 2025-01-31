@@ -1,0 +1,95 @@
+/* Default styles for desktops and laptops */
+body {
+    font-family: "Kalam", cursive;
+    background: url('sports_bg.gif') no-repeat center center fixed;
+    background-size: contain;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.875rem; /* 30px */
+}
+
+h1 {
+    color: #b700ff; /* Neon purple color */
+    font-family: "Kalam", cursive;
+    font-size: 2.5rem; /* 2.5em */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #b700ff;
+    -webkit-text-stroke: 1px #000000; /* Thin black outline */
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #b700ff, 0 0 20px #b700ff, 0 0 30px #b700ff, 0 0 40px #b700ff, 0 0 50px #b700ff;
+    }
+    to {
+        text-shadow: 0 0 20px #b700ff, 0 0 30px #b700ff, 0 0 40px #b700ff, 0 0 50px #b700ff, 0 0 60px #b700ff;
+    }
+}
+
+.societies-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.societies-list li {
+    background: #b700ff;
+    border-radius: 5px;
+    color: white;
+    margin: 10px 0;
+    padding: 15px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.societies-list li:hover {
+    background: #8c00b3;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* Media Queries for Responsive Font Sizing and Font Style */
+@media (max-width: 768px) {
+    body {
+        font-family: 'Arial', sans-serif; /* Font for tablets and mobile devices */
+    }
+
+    .container {
+        font-size: 1.5rem; /* Adjust container font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+    .societies-list li {
+        font-size: 1rem; /* Adjust list item size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem; /* Further adjust heading size for very small screens */
+    }
+    .societies-list li {
+        font-size: 0.9rem; /* Further adjust list item size for very small screens */
+    }
+}

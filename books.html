@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGDTUW City - Selling Portal</title>
+    <style>
+        body {
+            font-family: 'Playfair Display';
+            background-color: #f4f4f4;
+            background-image: url('books.jpg'); /* Use the correct file path for your image */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 10px rgba(102, 60, 11, 0.904);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: rgba(102, 60, 11, 0.904);
+        }
+
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .book-item {
+            padding: 15px;
+            border: 1px solid rgba(102, 60, 11, 0.904);
+            border-radius: 8px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        .book-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: rgba(102, 60, 11, 0.904);
+        }
+
+        .book-item p {
+            font-size: 1em;
+            margin: 5px 0;
+            color: rgba(102, 60, 11, 0.904);
+        }
+
+        .price {
+            font-weight: bold;
+            color: rgba(102, 60, 11, 0.904);
+        }
+
+        .condition {
+            font-style: italic;
+            color: #a1a1a1;
+        }
+        @media (max-width: 768px) {
+    .book-list {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .book-list {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+    .container {
+        width: 95%; /* Increase container width to fit smaller screens */
+        padding: 10px;
+    }
+
+    .book-item {
+        padding: 10px; /* Adjust padding for book items on small screens */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Books Available for Sale</h1>
+    <center><p>
+        We have a limited stock of books, sold on a <strong>first-come, first-served</strong> basis. <br>
+        Are you looking to buy? Fill out the buyer form here: <a href="https://forms.gle/jMUEqFy9ePxozPgWA">Buyer Form</a>.
+         <br>
+        Want to sell your preloved books? Use our seller form: <a href="https://forms.gle/SaU7aLSA5j11Zgy16">Seller Form</a>. <br>
+        At <strong>IGDTUW CITY</strong>, co-founded by <strong>Joysa Jain</strong> and <strong>Aarohi Chadha</strong>, 
+        we ensure quality and transparency, so you can trust every purchase. <br>
+        For queries, contact us at <a href="mailto:igdtuwcity@gmail.com">igdtuwcity@gmail.com</a> (include your name, branch, and phone number).
+    </p>    </center>
+    
+  
+    
+    <div class="book-list">
+        <div class="book-item">
+            <h3>H. K. Malik</h3>
+            <p class="condition">Condition: Good</p>
+            <p class="price">Rs. 300</p>
+        </div>
+        
+        <div class="book-item">
+            <h3>H. K. Malik</h3>
+            <p class="condition">Condition: New</p>
+            <p class="price">Rs. 450</p>
+        </div>
+        
+        <div class="book-item">
+            <h3>M. Morris Mano</h3>
+            <p class="condition">Condition: Good</p>
+            <p class="price">Rs. 300</p>
+        </div>
+        
+        <div class="book-item">
+            <h3>C in Depth</h3>
+            <p class="condition">Condition: Like New</p>
+            <p class="price">Rs. 284</p>
+        </div>
+        
+        <div class="book-item">
+            <h3>Electrical Technology</h3>
+            <p class="condition">Condition: Like New</p>
+            <p class="price">Rs. 587</p>
+        </div>
+        
+        <div class="book-item">
+            <h3>EVS by Dr. Ranu Gadi</h3>
+            <p class="condition">Condition: Good</p>
+            <p class="price">SOLD OUT</p>
+        </div>
+        
+        <div class="book-item">
+            <h3>Software Engineering by KK Aggarwal</h3>
+            <p class="condition">Condition: Good</p>
+            <p class="price">Rs. 350</p>
+        </div>
+        
+        <div class="book-item">
+            <h3>NM by MK Jain</h3>
+            <p class="condition">Condition: Good</p>
+            <p class="price">Rs. 400</p>
+        </div>
+        <div class="book-item">
+            <h3>Sheet Holder + Drafter</h3>
+            <p class="condition">Condition: Good</p>
+            <p class="price">Rs. 550</p>
+        </div>
+        <div class="book-item">
+            <h3>Drafter</h3>
+            <p class="condition">Condition: Good</p>
+            <p class="price">Rs. 250</p>
+        </div>
+        <div class="book-item">
+            <h3>Holder</h3>
+            <p class="condition">Condition: Good</p>
+            <p class="price">Rs. 150</p>
+        </div>
+
+        
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playwrite+BE+VLG:wght@100..400&family=Playwrite+BE+WAL:wght@100..400&display=swap" rel="stylesheet";
+    color: #ffffff;
+    background: url('cover_bg.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    text-align: center;
+    background-color: rgba(124, 120, 120, 0.8); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    max-width: 140px; /* Adjust the size as needed */
+    margin-bottom: 0px;
+    transition: filter 0.3s, box-shadow 0.3s;
+    /* filter: drop-shadow(0 0 20px #ffffff); */
+}
+
+/* .logo:hover {
+    filter: drop-shadow(0 0 10px #ffffff);
+} */
+
+.heading {
+    font-size: 3em;
+    color: #050550; /* Solid blue color */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: text-shadow 0.3s, color 0.3s;
+}
+
+.heading:hover {
+    text-shadow: 0 0 10px #050550;, 0 0 20px #050550;, 0 0 30px #050550;;
+    color: #050550;;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #050550;, 0 0 20px #050550;, 0 0 30px #050550;;
+    }
+    to {
+        text-shadow: 0 0 20px ##050550;, 0 0 30px #050550;, 0 0 40px #050550;;
+    }
+}
+
+.caption {
+    font-size: 1.2em;
+    color: #ffd700; /* Golden yellow */
+    margin-bottom: 30px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: black; /* Golden yellow */
+    text-decoration: none;
+    border: 2px solid #ffd700; /* Golden yellow */
+    border-radius: 5px;
+    background-color: #ffd700;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:hover {
+    background-color: #ebc000; /* Golden yellow */
+    color: black;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    text-emphasis-color: black;
+}
+.logo-igdtuw {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    max-width: 100px; 
+    height: auto; 
+    filter: drop-shadow(0 0 8px #ffffff); 
+    z-index: 1; 
+}
+
+

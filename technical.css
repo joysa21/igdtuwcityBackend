@@ -1,0 +1,95 @@
+body {
+    font-family: 'Kalam', cursive;
+    background: url('tech_bg.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem; /* Use rem for responsive font sizing */
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+h1 {
+    color: #b700ff;
+    font-size: 2.5rem; /* Use rem for responsive font sizing */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #b700ff;
+    -webkit-text-stroke: 1px #000000;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #b700ff, 0 0 20px #b700ff, 0 0 30px #b700ff, 0 0 40px #b700ff, 0 0 50px #b700ff;
+    }
+    to {
+        text-shadow: 0 0 20px #b700ff, 0 0 30px #b700ff, 0 0 40px #b700ff, 0 0 50px #b700ff, 0 0 60px #b700ff;
+    }
+}
+
+.societies-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.societies-list li {
+    background: #b700ff;
+    border-radius: 5px;
+    color: white;
+    margin: 10px 0;
+    padding: 15px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1.2rem; /* Use rem for responsive font sizing */
+}
+
+.societies-list li:hover {
+    background: #0056b3;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Media Queries for Responsive Font Sizing */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+    .societies-list li {
+        font-size: 1rem; /* Adjust list item size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem; /* Further adjust heading size for very small screens */
+    }
+    .societies-list li {
+        font-size: 0.9rem; /* Further adjust list item size for very small screens */
+    }
+}
+
+/* Override font for mobile devices */
+@media only screen and (max-width: 768px) {
+    body {
+        font-family: 'Arial', sans-serif; /* Mobile font */
+    }
+}

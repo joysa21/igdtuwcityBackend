@@ -1,0 +1,109 @@
+body {
+    background-image: url('bookMain.jpeg');
+    background-size: 99%;
+    background-position: center;
+    margin:0;
+}
+
+#image {
+  height: 100vw;
+  width: 100vw;
+
+}
+#body {
+    Text-align: center;
+    border: 7px solid #444A36;
+    border-radius:10px;
+    padding: 15px 3vw;
+    /* margin: 200px  500px 0px 350px; */
+    margin: 5vh auto; /* Responsive margin */
+    background-color: CCC4B8;
+    max-width: 600px; /* Set a max-width for larger screens */
+    margin-top: 300px;
+}
+
+#heading {
+    /* font-size: 48px; */
+    /* color:37271B; */
+  /* font-family: "Playfair Display", serif; */
+  font-optical-sizing: auto;
+  /* font-weight: 400; */
+  font-style: normal;
+  font-size: 3rem; /* Responsive font size */
+  color: #37271B; /* Add hash for hex color */
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+
+}
+
+#igdtuw {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+#start {
+    /* font-size: 24px; */
+    /* border: 4px solid #444A36; */
+    border-radius: 10px;
+    /* padding: 10px 20px; */
+    /* background-color: 9D704D; */
+    /* color: 37271B; */
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+
+  font-size: 1.5rem; /* Responsive font size */
+  border: 4px solid #444A36;
+  border-radius: 10px;
+  padding: 10px 2vw; /* Responsive padding */
+  background-color: #9D704D; /* Add hash for hex color */
+  color: #37271B; /* Add hash for hex color */
+}
+
+#start:hover {
+    background-color: #7A5535; /* Change background color */
+    color: #FFFFFF; /* Change text color */
+    transform: scale(1.05); /* Scale up */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+
+/* Responsive adjustments */
+
+/* For mobile devices */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #body {
+      margin: 20px 10px; /* Adjust margins for tablet devices */
+      padding: 10px; /* Adjust padding */
+  }
+
+  #heading {
+      font-size: 2.5rem; /* Slightly smaller font size */
+  }
+
+  #start {
+      font-size: 1.2rem; /* Slightly smaller button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  #body {
+      width: 90%; /* Extend the box width */
+      margin: 0 auto; /* Center the box */
+      padding: 8px 10px; /* Adjust padding if needed */
+  }
+
+  #heading {
+      font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  #start {
+      font-size: 1rem; /* Smaller button font size for mobile */
+  }
+}
+
+

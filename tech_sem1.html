@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playwrite+BE+VLG:wght@100..400&family=Playwrite+BE+WAL:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #00796b;
+        }
+        h1 {
+            font-family: 'Josefin Slab', serif;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-family: 'Kalam', cursive;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #004d40;
+        }
+        h3 {
+            font-family: 'Josefin Slab', sans-serif;
+            font-size: 1.2em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #00695c;
+        }
+        .roadmap-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            background-color: #e0f2f1;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .roadmap-item:hover {
+            background-color: #b2dfdb;
+        }
+        .roadmap-item input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .roadmap-item label {
+            flex-grow: 1;
+            font-family: 'Merriweather', serif;
+            font-size: 1em;
+            color: #004d40;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: #41c8e0;
+        }
+        .road-container {
+            position: relative;
+/*             position:fixed; */
+            width: 100%;
+            height: 150px;
+            background-image: url('road1.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+        .car {
+            width: 100px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: left 0.5s;
+        }
+        .reset-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.reset-btn:hover {
+    background-color: #004d40;
+}
+
+    </style>
+    <script>
+       function toggleCompletion(event) {
+    const checkbox = event.target;
+    const label = checkbox.nextElementSibling;
+    const itemId = checkbox.id;
+
+    if (checkbox.checked) {
+        label.classList.add('completed');
+    } else {
+        label.classList.remove('completed');
+    }
+    
+    // Save state in localStorage
+    localStorage.setItem(itemId, checkbox.checked);
+
+    moveCar();
+}
+
+function loadProgress() {
+    const checkboxes = document.querySelectorAll('.roadmap-item input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        const savedState = localStorage.getItem(checkbox.id);
+        if (savedState === 'true') {
+            checkbox.checked = true;
+            checkbox.nextElementSibling.classList.add('completed');
+        }
+    });
+    moveCar();
+}
+
+function resetProgress() {
+    const checkboxes = document.querySelectorAll('.roadmap-item input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+        checkbox.nextElementSibling.classList.remove('completed');
+        localStorage.removeItem(checkbox.id);
+    });
+    moveCar();
+}
+
+// Load progress on page load
+window.onload = loadProgress;
+
+
+        function moveCar() {
+            const checkboxes = document.querySelectorAll('.roadmap-item input[type="checkbox"]');
+            const car = document.querySelector('.car');
+            let completedCount = 0;
+
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    completedCount++;
+                }
+            });
+
+            const totalItems = checkboxes.length;
+            const containerWidth = document.querySelector('.road-container').offsetWidth;
+            const stepWidth = (containerWidth - car.offsetWidth) / totalItems;
+            car.style.left = (completedCount * stepWidth) + 'px';
+//             function resetProgress() {
+//     const checkboxes = document.querySelectorAll('.roadmap-item input[type="checkbox"]');
+//     checkboxes.forEach(checkbox => {
+//         checkbox.checked = false;
+//         checkbox.nextElementSibling.classList.remove('completed');
+//     });
+//     moveCar();
+// }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="road-container">
+            <img src="car1.webp" alt="Car" class="car">
+        </div>
+        <button onclick="resetProgress()" class="reset-btn">Reset Progress</button>
+
+        <h1>Technical Branches</h1>
+        <h2>DW! We've got your back</h2>
+        <h3>1. Placements</h3>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item1" onclick="toggleCompletion(event)">
+            <label for="item1">Create a LinkedIn profile</label>
+        </div>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item2" onclick="toggleCompletion(event)">
+            <label for="item2">Do basics of at least 1 programming language (build conceptual clarity for DSA)</label>
+        </div>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item3" onclick="toggleCompletion(event)">
+            <label for="item3">Participate in at least 1 Ideathon</label>
+        </div>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item4" onclick="toggleCompletion(event)">
+            <label for="item4">Go to Seminars/join Webinars related to tech-field</label>
+        </div>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item5" onclick="toggleCompletion(event)">
+            <label for="item5">Keep track of opportunities/Scholarships (Reliance Scholarship, Google WE etc)</label>
+        </div>
+        <h3>2. Societies</h3>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item6" onclick="toggleCompletion(event)">
+            <label for="item6">Explore both Technical and Non-Technical Societies (If you are interested in being a part of non-tech Societies, you must do that in 1st year)</label>
+        </div>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item7" onclick="toggleCompletion(event)">
+            <label for="item7">Do Social Interaction, connect with seniors</label>
+        </div>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item8" onclick="toggleCompletion(event)">
+            <label for="item8">Keep checking out IGDTUW CITY's website for regular updates</label>
+        </div>
+        <!-- <div class="roadmap-item">
+            <label for="item8">~ Be an active member of the Society only if you are doing something productive (Not only for promoting events)</label>
+        </div> -->
+        <!-- <div class="roadmap-item">
+            <label for="item9">~ Societies like CB, GDSC will teach you things like Web Development. It's good to be a part of such Societies</label>
+        </div> -->
+        <h3>3. Academics</h3>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item10" onclick="toggleCompletion(event)">
+            <label for="item10">Take Proper Notes</label>
+        </div>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item11" onclick="toggleCompletion(event)">
+            <label for="item11">Maintain Good attendance (Both Lectures and Lab)</label>
+        </div>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item12" onclick="toggleCompletion(event)">
+            <label for="item12">Give Proper attention during labs, submissions should be done on time</label>
+        </div>
+        <div class="roadmap-item">
+            <input type="checkbox" id="item13" onclick="toggleCompletion(event)">
+            <label for="item13">Maintain good CGPA (At least 8.0+)</label>
+        </div>
+        <!-- <div class="roadmap-item">
+            <input type="checkbox" id="item14" onclick="toggleCompletion(event)">
+            <label for="item14">Keep track of opportunities/Scholarships (Reliance Scholarship, Google WE etc)</label>
+        </div> -->
+        <div class="roadmap-item">
+            <label for="item15">~ Maintaining a good CGPA in 1st year is important because, in the later years, it would be difficult for you to maintain a good CGPA along with internships. Also, when 2 people having the same skills sit together for an interview, the only parameter to differentiate between them is CGPA</label>
+        </div>
+    </div>
+</body>
+</html>

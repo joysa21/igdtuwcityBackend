@@ -1,0 +1,74 @@
+body{
+    margin:0;
+    padding:0;
+    background-image: url(https://hrfibreglass.co.uk/wp-content/uploads/2023/09/road-map.jpg);
+    background-size: cover;
+
+}
+a{
+    text-decoration: none;
+    color:rgba(32, 0, 119, 0.449);
+}
+h1{
+    margin-bottom: 0%;
+    margin-top: 0%;
+    display:flex;
+    justify-content: center;
+    font-size: 70px;
+    font-family: "Spicy Rice", serif;
+}
+h2{
+    margin-top: 0%;
+    display:flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: "Spicy Rice", serif;
+}
+
+.tech {
+    position: absolute;  /* Positions the element relative to its nearest positioned ancestor */
+    left: 20;             /* Aligns the element to the left edge */
+    top: 35%;            /* Positions the element at the vertical center */
+    transform: translateY(-50%); /* Adjusts for the element's height to perfectly center it */
+    margin: 20px;        /* Adds some space from the edges */
+    padding: 10px 20px;
+    background-color: #3498db; /* Background color */
+    color: #fff;          /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;  /* Rounded corners */
+    font-family: 'Alfa Slab One', sans-serif; /* Font style */
+    font-size: 18px;     /* Font size */
+    transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+.tech:hover{
+    background-color: rgb(207, 203, 203);
+    color:black;
+}
+
+
+
+.nontech:hover{
+    background-color: rgb(207, 203, 203);
+    color:black;
+}
+
+
+
+  
+    
+
+.nontech {
+    position: absolute;  /* Positions the element relative to its nearest positioned ancestor */
+    right: 0;            /* Aligns the element to the right edge */
+    bottom: 0;           /* Aligns the element to the bottom edge */
+    margin: 20px;        /* Adds some space from the edges */
+    padding: 10px 20px;
+    background-color: #f39c12; /* Background color */
+    color: #fff;          /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;  /* Rounded corners */
+    font-family: 'Alfa Slab One', sans-serif; /* Font style */
+    font-size: 18px;     /* Font size */
+    transition: background-color 0.3s; /* Smooth hover transition */
+}

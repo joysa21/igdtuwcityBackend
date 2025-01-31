@@ -1,0 +1,93 @@
+body {
+    font-family: "Kalam", cursive;
+    background: url('cultural.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+h1 {
+    color: #39FF14; /* Neon green color */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #15080f, 0 0 10px #000000, 0 0 15px #1a1015, 0 0 20px #1a1518, 0 0 25px #0d0408;
+    -webkit-text-stroke: 1px #000000; /* Thin black outline */
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #39FF14, 0 0 20px #39FF14, 0 0 25px #39FF14;
+    }
+    to {
+        text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14;
+    }
+}
+
+.societies-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.societies-list li {
+    background: #39FF14; /* Neon green color */
+    border-radius: 5px;
+    color: rgb(3, 2, 2);
+    margin: 10px 0;
+    padding: 15px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.societies-list li:hover {
+    background: #017a11;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(3, 2, 2);
+    border-radius: 5px;
+}
+
+/* Media Queries for Responsive Font Sizing */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+    .societies-list li {
+        font-size: 1.2rem; /* Adjust list item size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem; /* Further adjust heading size for very small screens */
+    }
+    .societies-list li {
+        font-size: 1rem; /* Further adjust list item size for very small screens */
+    }
+}
+
+/* Override font for mobile devices */
+@media only screen and (max-width: 768px) {
+    body {
+        font-family: 'Arial', sans-serif; /* Mobile font */
+    }
+}

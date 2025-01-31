@@ -1,0 +1,78 @@
+.name {
+    font-family: "Londrina Shadow", sans-serif;
+    text-align: center;
+    background-color: bisque;
+    
+    margin: 0px;
+    border-radius: 50px;
+}
+.joysa p{
+padding: 0%;
+text-align: center;
+font-size: 25px;
+font-family: "Kalam", cursive;
+color:rgb(214, 215, 211);
+background-color: rgb(18, 0, 70);
+margin: 0px;
+border-radius: 50px;
+}
+.aarohi p{
+    padding: 0%;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Kalam", cursive;
+    color:rgb(214, 215, 211);
+    background-color: rgb(18, 0, 70);
+    margin: 0px;
+    border-radius: 50px;
+    }
+body{
+    
+    padding: 0%;
+    margin: 0%;
+    height: 100%;
+    background: url('bg1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    
+    
+}
+h1{
+    font-family: "Honk", system-ui;
+margin-left: 50%;
+
+    
+}
+
+.jpic{
+float: left;
+    /* padding:20px; */
+    margin-top: 50px;
+    height: 380px;
+         padding:20px; 
+    padding: 0px;
+    border-radius: 100px;
+}
+.apic{
+    float: right;
+    margin-top: 50px;
+    height: 380px;
+         /* padding:20px;  */
+    padding: 0px;
+    border-radius: 100px;
+    }
+
+.joysa{
+    font-size: 50px;
+    padding:20px;
+margin-top: 30px;
+}
+.aarohi{
+    font-size: 50px;
+    padding:20px;
+margin-top: 30px;
+}
+a{
+    text-decoration: none;
+    color:wheat;
+}
+    

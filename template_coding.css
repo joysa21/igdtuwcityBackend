@@ -1,0 +1,244 @@
+/* .clickable{
+    cursor: pointer;
+    text-align: center;
+}  */
+
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    position: relative;
+
+
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("template_coding.jpeg");
+
+    background-size: cover;
+    background-position: center 15%;
+    opacity: 0.4;
+
+    /* Adjust opacity as needed */
+    z-index: -1;
+    /* Ensure it stays behind all content */
+}
+
+
+
+
+
+
+.top-links {
+    /* position: absolute; */
+    /* now , the links are taken out from the normal flow of the document, and it is non existent for other elements  */
+    /* we can place this anywhere on the entire page,but in case of postion : relative , we are placing the element acc to its original position in the flow of document */
+    top: 0px;
+    /* moving 20 px down from top edge */
+    right: 200px;
+    /* moving 20 px right from the right edge */
+    /* setting the position of the links */
+    background-color: black;
+    opacity: 0.65;
+    padding: 50px;
+    padding-left: 20%;
+    width: 120%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+
+}
+
+
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    margin-left: 50px;
+    /* leaves a space of 10px after every link */
+}
+
+.nav-link::after {
+    content: "\25BC";
+    /* Unicode for downward triangle */
+    font-size: 0.7em;
+    margin-left: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+a:hover {
+    color: rgb(95, 95, 229);
+    text-decoration: underline;
+    width: 30%;
+    font-size: 30px;
+}
+
+/* header{
+    background-color: black;
+    padding:0px;
+    width:100px;
+} */
+
+.startingtext {
+    color: darkblue;
+    font-size: 40px;
+    position: relative;
+    font-family: "Kalam", cursive;
+
+    /* z-index: 2; */
+    h1 {
+        text-shadow: 1px 1px 1px #919191,
+            1px 2px 1px #919191,
+            1px 3px 1px #919191,
+            1px 4px 1px #919191,
+            1px 5px 1px #919191,
+            1px 6px 1px #919191,
+            1px 7px 1px #919191,
+            1px 8px 1px #919191,
+            1px 9px 1px #919191,
+            1px 10px 1px #919191;
+
+
+    }
+
+}
+
+.startingtext:hover {
+    transition: 1s;
+    font-size: 50px;
+
+}
+
+.startingtext p {
+    color: yellow;
+    font-size: larger;
+    text-align: center;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191;
+
+}
+
+.startingtext h2 {
+
+    color: maroon;
+    font-size: 115px;
+    text-align: right;
+    font-style: italic;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191;
+
+}
+
+
+.logo {
+    padding: 5px;
+    position: absolute;
+    z-index: 3;
+}
+
+.our_ig {
+    font-family: "Josefin Slab", serif;
+    font-size: 30px;
+    font-optical-sizing: auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+.back {
+    text-align: center;
+    gap: 20px;
+    background-color: rgb(68, 6, 6);
+    font-size: 20px;
+    padding: 0px;
+}
+.back a{
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+/* ADDING RESPONSIVENESSSSSSSS */
+@media screen and (max-width: 600px) {
+
+    /* Reduce logo size on mobile */
+    .logo img {
+        width: 50px;
+        height: auto;
+    }
+
+    /* Stack links vertically and center them on mobile */
+    .top-links {
+        padding: 10px;
+        width: 200%;
+        margin-left: 0px;
+        text-align: right;
+        display: block;
+    }
+
+    .nav-link {
+        display: block;
+        margin: 10px auto; /* Centering and spacing on mobile */
+        font-size: 18px;
+        text-align: center;
+        position: relative;
+    }
+
+    .nav-link::after {
+        content: "\25BC";
+        font-size: 0.7em;
+        position: absolute;
+        top: 50%;
+        right: 5px; /* Adjusting alignment of the triangle */
+        transform: translateY(-50%);
+    }
+
+    /* Adjust the .back styles */
+    .back {
+        font-size: medium;
+        padding: 8px;
+        text-align: center;
+    }
+.startingtext h2 {
+      font-size: 48px; /* Smaller font size for mobile */ 
+margin-left: 27%;
+}
+    .back a {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
