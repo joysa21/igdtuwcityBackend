@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 
+
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,6 +23,9 @@ function loadUsers() {
 function saveUsers(users) {
     fs.writeFileSync('users.json', JSON.stringify(users, null, 2));
 }
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
+});
 
 // Registration route
 app.post('/register', (req, res) => {
@@ -48,9 +52,11 @@ app.post('/login', (req, res) => {
         res.json({ success: false, message: "Invalid username or password." });
     }
 });
-
+app.get("/",(req,res) => {
+    res.send("server is running!");
+});
 // Start server
-const PORT = process.env.PORT || 4000; // Use the appropriate port
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 3000; // Use the appropriate port
+app.listen(PORT, "0.0.0.0",() => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
